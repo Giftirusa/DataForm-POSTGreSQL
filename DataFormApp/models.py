@@ -7,3 +7,8 @@ class Contribution(models.Model):
 
     def __str__(self):
         return f"${self.amount} USD by {self.contributor_email}"
+
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} ({self.createdAt})"
